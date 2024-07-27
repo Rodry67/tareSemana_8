@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="validations.js" defer></script>
+</head>
+<body>
+    <h1>Agregar Hotel</h1>
+    <form action="procesar_hotel.php" method="POST" onsubmit="return validateHotelForm()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="ubicacion">Ubicación:</label>
+        <input type="text" id="ubicacion" name="ubicacion" required><br>
+
+        <label for="habitaciones_disponibles">Habitaciones Disponibles:</label>
+        <input type="number" id="habitaciones_disponibles" name="habitaciones_disponibles" required><br>
+
+        <label for="tarifa_noche">Tarifa por Noche:</label>
+        <input type="number" step="0.01" id="tarifa_noche" name="tarifa_noche" required><br>
+
+        <button type="submit">Agregar Hotel</button>
+    </form>
+</body>
+</html>
