@@ -5,7 +5,7 @@ $id = $_POST['id'];
 
 $sql = "SELECT * FROM VUELOS WHERE id_vuelo = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssii", $id);
+$stmt->bind_param("i", $id);
 
 $stmt->execute();
 
